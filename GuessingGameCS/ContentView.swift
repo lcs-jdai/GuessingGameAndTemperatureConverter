@@ -11,6 +11,11 @@ struct ContentView: View {
     
     @State var currentGuess: Double = 50.0
     
+    let target = Int.random(in: 1...100)
+    
+    //The feedback to the user as they play
+    @State var feedback = ""
+    
     var body: some View {
         VStack{
             Slider(value: $currentGuess,
@@ -25,17 +30,38 @@ struct ContentView: View {
                    maximumValueLabel: {
                 Text("100.0")
             })
+                .padding()
             
             Text ("61")
             Text ("\(String(format: "%.0f", currentGuess))")
             
             Button(action: {
-                // NOTE: Output will not be shown unless this app is run in the "full" simulator
-                print("button was pressed")
+                
+                //Mkae the user's Guess into an integer
+                let currentGuessAsInteger = Int(currentGuess)
+                
+                //Compare the user's current Guess to the target
+                if currentGuessAsInteger < target {
+                    //Guess Higher
+                    feedback = "Guess Higher Next Time!"
+                }
+                else if currentGuessAsInteger > target {
+                    feedback = "Guess Lower Next Time!"
+                }
+                else if currentGuessAsInteger == target {
+                    feedback = "You Got It!"
+                }
             }, label: {
                 Text("Submit Guess")
             })
                 .buttonStyle(.bordered)
+                .padding()
+            
+            Text ("The super secret target is \(target)")
+            
+            Text (feedback)
+                .italic()
+                .padding()
             
             Spacer()
             
