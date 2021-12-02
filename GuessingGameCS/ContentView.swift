@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var currentGuess: Double = 50.0
+    
     var body: some View {
         VStack{
-            Slider(value: .constant(50.0),
+            Slider(value: $currentGuess,
                    in: 0.0...100.0,
                    step: 1.0,
                    label: {
@@ -23,25 +26,30 @@ struct ContentView: View {
                 Text("100.0")
             })
             
+            Text ("61")
+            Text ("\(String(format: "%.0f", currentGuess))")
+            
             Button(action: {
                 // NOTE: Output will not be shown unless this app is run in the "full" simulator
                 print("button was pressed")
             }, label: {
                 Text("Submit Guess")
             })
-            .buttonStyle(.bordered)
+                .buttonStyle(.bordered)
             
             Spacer()
-                
-            }
-        .navigationTitle("Guessing Game")
+            
         }
+        .navigationTitle("Guessing Game")
     }
+       
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-        ContentView()
+            ContentView()
         }
     }
 }
