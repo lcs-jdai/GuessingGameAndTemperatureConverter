@@ -11,6 +11,7 @@
 		6D11516A27590B0500802582 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D11516927590B0500802582 /* ContentView.swift */; };
 		6D11516C27590B1000802582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D11516B27590B1000802582 /* Assets.xcassets */; };
 		6D11516F27590B1000802582 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D11516E27590B1000802582 /* Preview Assets.xcassets */; };
+		6D1151762759161800802582 /* TemperatureConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1151752759161700802582 /* TemperatureConverterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		6D11516927590B0500802582 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6D11516B27590B1000802582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D11516E27590B1000802582 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6D1151752759161700802582 /* TemperatureConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 		6D11515B27590B0500802582 = {
 			isa = PBXGroup;
 			children = (
+				6D11516727590B0500802582 /* GuessingGameCSApp.swift */,
 				6D11516627590B0500802582 /* GuessingGameCS */,
 				6D11516527590B0500802582 /* Products */,
 			);
@@ -51,7 +54,7 @@
 		6D11516627590B0500802582 /* GuessingGameCS */ = {
 			isa = PBXGroup;
 			children = (
-				6D11516727590B0500802582 /* GuessingGameCSApp.swift */,
+				6D1151752759161700802582 /* TemperatureConverterView.swift */,
 				6D11516927590B0500802582 /* ContentView.swift */,
 				6D11516B27590B1000802582 /* Assets.xcassets */,
 				6D11516D27590B1000802582 /* Preview Content */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D1151762759161800802582 /* TemperatureConverterView.swift in Sources */,
 				6D11516A27590B0500802582 /* ContentView.swift in Sources */,
 				6D11516827590B0500802582 /* GuessingGameCSApp.swift in Sources */,
 			);
